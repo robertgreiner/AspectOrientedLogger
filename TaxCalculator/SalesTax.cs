@@ -6,12 +6,14 @@ namespace TaxCalculator
     [Logging]
     public class SalesTax : ITaxType
     {
-        public decimal Calculate(decimal subTotal)
+        [Logging]
+        public virtual decimal Calculate(decimal subTotal)
         {
             return Math.Round(subTotal * 1.0825m, 2, MidpointRounding.ToEven);
         }
 
-        public void ErrorMethod()
+        [Logging]
+        public virtual void ErrorMethod()
         {
             throw new NotImplementedException();
         }

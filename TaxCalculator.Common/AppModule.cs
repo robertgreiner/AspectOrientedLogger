@@ -8,7 +8,7 @@ namespace TaxCalculator.Common
     {
         public override void Load()
         {
-            Bind<ITaxType>().To<SalesTax>().Intercept().With<LoggingInterceptor>();
+            Bind<ITaxType>().To<SalesTax>();
         }
     }
 }
